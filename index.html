@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emeke & Fiona's Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FFEFDF; /* Exact match to your invitation peach */
+            --navy: #2C4C87;     /* Exact match to your invitation text */
+            --accent: #E4DCC5;   /* Matches the soft watermark/thistle color */
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; padding: 0; 
+            font-family: 'Quicksand', sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--navy); 
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 239, 223, 0.98);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--accent);
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--navy);
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Invitation Section */
+        .invitation-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: center;
+        }
+        .invitation-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(44, 76, 135, 0.1);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        h2 { font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; }
+        h3 { margin-top: 30px; border-bottom: 1px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+
+        /* Buttons */
+        .btn-group { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 20px; }
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: var(--navy);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            width: 250px;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--navy);
+            color: var(--navy);
+        }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+
+        /* Local Guide Layout */
+        .guide-grid { text-align: left; max-width: 600px; margin: auto; }
+        .guide-item { margin-bottom: 20px; }
+
+        footer { padding: 60px 20px; text-align: center; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
+
+        @media (max-width: 600px) {
+            nav a { margin: 0 5px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#stay">Local Guide</a>
+        <a href="#rsvp">RSVP</a>
+    </nav>
+
+    <div id="home" class="invitation-container">
+        <img src="invitation.png" alt="Emeke & Fiona Wedding Invitation" class="invitation-image">
+    </div>
+
+    <section id="schedule">
+        <h2>The Big Day</h2>
+        <p><strong>Saturday 25th July 2026</strong><br>
+        2:00 PM prompt<br>
+        Townend Farm, North Cave, YO43 4XB</p>
+        
+        <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Townend+Farm+North+Cave+YO43+4XB" 
+               target="_blank" class="btn">📍 Get Directions</a>
+            
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Emeke+%26+Fiona%27s+Wedding&dates=20260725T140000Z/20260726T000000Z&details=Please+leave+the+stilettos+at+home!&location=Townend+Farm,+North+Cave+YO43+4XB" 
+               target="_blank" class="btn btn-secondary">📅 Save to Calendar</a>
+        </div>
+    </section>
+
+    <section id="stay" style="background-color: rgba(228, 220, 197, 0.2); max-width: 100%;">
+        <div style="max-width: 800px; margin: auto;">
+            <h2>Local Guide</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>🏨 Where to Stay</h3>
+                    <p><strong>Cave Castle Hotel:</strong> Historic hotel and spa (0.5 miles away).<br>
+                    <strong>Travelodge Hull South Cave:</strong> Convenient and close (1 mile away).</p>
+                </div>
+                <div class="guide-item">
+                    <h3>🍴 Where to Eat</h3>
+                    <p><strong>The White Hart:</strong> Classic pub in North Cave.<br>
+                    <strong>The Hotham Arms:</strong> Award-winning food in the neighboring village.</p>
+                </div>
+                <div class="guide-item">
+                    <h3>🚖 Taxis</h3>
+                    <p><em>Pre-booking is essential for a farm venue!</em><br>
+                    <strong>Cave Cars:</strong> 01430 422633<br>
+                    <strong>South Cave Cars:</strong> 01430 422322</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <p>We can't wait to celebrate with you!<br>Please let us know by <strong>1st May 2026</strong>.</p>
+        
+        <a href="#" class="btn">RSVP Online Here</a>
+    </section>
+
+    <footer>
+        <p>Love always, Emeke and Fiona x</p>
+    </footer>
+
+</body>
+</html>

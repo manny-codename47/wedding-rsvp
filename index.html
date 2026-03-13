@@ -95,6 +95,12 @@
             border: 2px solid var(--navy);
             color: var(--navy);
         }
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            min-width: auto;
+            margin-top: 10px;
+        }
         .btn:hover { opacity: 0.8; transform: translateY(-2px); }
 
         /* Guide Grid */
@@ -169,7 +175,7 @@
         
         <div class="event-box">
             <h3>✨ The Order of Event</h3>
-            <p>We are currently fine-tuning the magic! Please check back closer to the date for the full timeline.</p>
+            <p>We are currently fine-tuning the magic! Please check back closer to the date for the full timeline of the day.</p>
         </div>
 
         <div class="btn-group">
@@ -195,22 +201,37 @@
     <section id="guide" style="background-color: rgba(228, 220, 197, 0.2); max-width: 100%;">
         <div style="max-width: 1000px; margin: auto;">
             <h2>The Local Guide</h2>
+            
             <div class="guide-grid">
                 <div class="guide-card">
                     <h3>🏨 Where to Stay</h3>
-                    <p><strong><a href="https://www.cavecastlehotel.com/" target="_blank">Cave Castle Hotel</a></strong> (0.8 miles)</p>
-                    <p><strong><a href="https://www.travelodge.co.uk/hotels/51/Hull-South-Cave-travelodge" target="_blank">Travelodge South Cave</a></strong> (1.2 miles)</p>
-                    <a href="https://www.airbnb.co.uk/s/North-Cave--United-Kingdom" target="_blank" class="btn btn-secondary" style="min-width: auto; padding: 10px 20px; font-size: 0.8rem; margin-top: 10px;">Search Airbnb</a>
+                    <p><strong><a href="https://www.cavecastlehotel.com/" target="_blank">Cave Castle Hotel</a></strong> (0.8 miles)<br>Manor house with spa and golf.</p>
+                    <p><strong><a href="https://www.travelodge.co.uk/hotels/51/Hull-South-Cave-travelodge" target="_blank">Travelodge South Cave</a></strong> (1.2 miles)<br>Practical and very close.</p>
+                    <p><strong><a href="https://www.marstonsinns.co.uk/inns/fox-coney-south-cave" target="_blank">The Fox & Coney Inn</a></strong> (1.5 miles)<br>Charming historic pub & inn.</p>
+                    <p><strong><a href="https://www.marstonsinns.co.uk/inns/green-dragon-welton" target="_blank">The Green Dragon</a></strong> (4.5 miles)<br>Traditional 17th-century inn.</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://www.airbnb.co.uk/s/North-Cave--United-Kingdom" target="_blank" class="btn btn-secondary btn-small">Search Airbnb</a>
+                        <a href="https://www.hoseasons.co.uk/holiday-lodges/east-pennines/east-yorkshire" target="_blank" class="btn btn-secondary btn-small">Search Lodges</a>
+                    </div>
                 </div>
+
                 <div class="guide-card">
                     <h3>🍴 Eat & Drink</h3>
-                    <p><strong>The White Hart, North Cave</strong></p>
-                    <p><strong>The Hotham Arms</strong> (2.5 miles)</p>
-                    <p><strong>Drewton’s Farm Shop</strong><br>Best for brunch!</p>
+                    <p><strong>The White Hart</strong><br>Our local village pub in North Cave.</p>
+                    <p><strong><a href="https://www.hothamarms.co.uk/" target="_blank">The Hotham Arms</a></strong> (2.5 miles)<br>Cosy dining with great food.</p>
+                    <p><strong><a href="https://www.pipeandglass.co.uk/" target="_blank">The Pipe and Glass</a></strong> (9 miles)<br>Michelin-star gastropub.</p>
+                    <p><strong><a href="https://www.thebeverleyarms.co.uk/" target="_blank">The Beverley Arms</a></strong> (10 miles)<br>Stylish coaching inn in Beverley.</p>
+                    <p><strong><a href="https://drewtons.co.uk/" target="_blank">Drewton’s Farm Shop</a></strong><br>Excellent for brunch!</p>
                 </div>
+
                 <div class="guide-card">
                     <h3>🚖 Taxis</h3>
-                    <p>Cave Cars: 01430 422633<br>South Cave Cars: 01430 422322</p>
+                    <p><strong>Pre-book taxis!</strong> Uber is not reliable here.</p>
+                    <p>
+                        Cave Cars: 01430 422633<br>
+                        South Cave Cars: 01430 422322<br>
+                        Beverley Cars: 01482 867667
+                    </p>
                 </div>
             </div>
         </div>
@@ -219,12 +240,22 @@
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
-            <div class="faq-item"><strong>Is there parking?</strong><p>Yes, free parking at Townend Farm.</p></div>
-            <div class="faq-item"><strong>Are kids allowed?</strong><p>Absolutely! Children are welcome.</p></div>
-            <div class="faq-item"><strong>Dress code?</strong><p>Whatever you're happy in! Flats or block heels are best for the farm ground.</p></div>
+            <div class="faq-item">
+                <strong>Is there parking available?</strong>
+                <p>Yes, there is plenty of free parking on-site at Townend Farm.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Are kids allowed?</strong>
+                <p>Absolutely! Children are welcome. It is a working farm, so they will have plenty to see!</p>
+            </div>
+            <div class="faq-item">
+                <strong>What is the dress code?</strong>
+                <p>Whatever you're happy in! Flats or block heels are best for the farm ground.</p>
+            </div>
         </div>
+
         <div class="contact-info">
-            <h3>Questions?</h3>
+            <h3>Still have questions?</h3>
             <a href="mailto:emmanuel.isitor@icloud.com" class="contact-link">📧 emmanuel.isitor@icloud.com</a>
             <a href="tel:07411218237" class="contact-link">📞 07411 218237</a>
         </div>
@@ -233,7 +264,7 @@
     <section id="rsvp">
         <h2>RSVP</h2>
         <p>Please let us know if you can make it by 1st May 2026.</p>
-        <a href="#" class="btn">RSVP Online Here</a>
+        <a href="PASTE_YOUR_RSVP_LINK_HERE" class="btn">RSVP Online Here</a>
     </section>
 
     <footer><p>Love always, Emeke and Fiona x</p></footer>

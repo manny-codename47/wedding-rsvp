@@ -7,9 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #FFEFDF; /* Matches your invitation peach */
-            --navy: #2C4C87;     /* Matches your invitation text */
-            --accent: #E4DCC5;   
+            --bg-color: #FFEFDF; /* Exact match to your invitation peach */
+            --navy: #2C4C87;     /* Exact match to your invitation text */
+            --accent: #E4DCC5;   /* Matches the soft watermark color */
+            --white: #ffffff;
         }
 
         * { box-sizing: border-box; }
@@ -41,7 +42,7 @@
             letter-spacing: 1px;
         }
 
-        /* Invitation Section */
+        /* Invitation Image - Seamless */
         .invitation-container {
             max-width: 800px;
             margin: 0 auto;
@@ -60,30 +61,69 @@
         /* Sections */
         section {
             padding: 80px 20px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
             text-align: center;
         }
         h2 { font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; }
+        h3 { font-weight: 600; margin-top: 0; font-size: 1.2rem; }
 
+        /* Buttons */
+        .btn-group { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 25px; }
         .btn {
             display: inline-block;
             padding: 14px 30px;
             background-color: var(--navy);
-            color: #ffffff;
+            color: var(--white);
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             transition: 0.3s;
-            margin: 10px;
+            min-width: 250px;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--navy);
+            color: var(--navy);
+        }
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            min-width: auto;
+            margin-top: 10px;
+        }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+
+        /* Grid for Local Guide */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            text-align: left;
+            margin-top: 40px;
+        }
+        .guide-card {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--accent);
         }
 
-        /* Contact Section */
+        /* FAQ Styling */
+        .faq-container {
+            text-align: left;
+            max-width: 700px;
+            margin: 40px auto 0;
+        }
+        .faq-item { margin-bottom: 25px; }
+        .faq-item strong { display: block; margin-bottom: 5px; font-size: 1.1rem; }
+
+        /* Contact Box */
         .contact-info {
             background-color: rgba(44, 76, 135, 0.05);
             padding: 40px 20px;
             border-radius: 15px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
         .contact-link {
             color: var(--navy);
@@ -94,7 +134,12 @@
             font-size: 1.1rem;
         }
 
-        footer { padding: 60px 20px; text-align: center; font-size: 0.9rem; opacity: 0.8; }
+        footer { padding: 60px 20px; text-align: center; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
+
+        @media (max-width: 600px) {
+            nav a { margin: 0 5px; font-size: 0.75rem; }
+            section { padding: 50px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -102,7 +147,8 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#schedule">Schedule</a>
-        <a href="#stay">Local Guide</a>
+        <a href="#guide">Local Guide</a>
+        <a href="#faq">FAQ</a>
         <a href="#rsvp">RSVP</a>
     </nav>
 
@@ -116,17 +162,62 @@
         2:00 PM prompt<br>
         Townend Farm, North Cave, YO43 4XB</p>
         
-        <a href="https://www.google.com/maps/search/?api=1&query=Townend+Farm+North+Cave+YO43+4XB" target="_blank" class="btn">📍 Get Directions</a>
+        <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Townend+Farm+North+Cave+YO43+4XB" target="_blank" class="btn">📍 Get Directions</a>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Emeke+%26+Fiona%27s+Wedding&dates=20260725T140000Z/20260726T000000Z&details=Please+leave+the+stilettos+at+home!&location=Townend+Farm,+North+Cave+YO43+4XB" 
+               target="_blank" class="btn btn-secondary">📅 Save to Calendar</a>
+        </div>
     </section>
 
-    <section id="stay">
-        <h2>Local Guide</h2>
-        <p><strong>Where to Stay:</strong> Cave Castle Hotel or Travelodge Hull South Cave</p>
-        <p><strong>Taxis:</strong> Cave Cars (01430 422633) or South Cave Cars (01430 422322)</p>
-        
+    <section id="guide" style="background-color: rgba(228, 220, 197, 0.2); max-width: 100%;">
+        <div style="max-width: 1000px; margin: auto;">
+            <h2>The Local Guide</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <h3>🏨 Where to Stay</h3>
+                    <p><strong>Cave Castle Hotel</strong> (0.8 miles)</p>
+                    <p><strong>Travelodge Hull South Cave</strong> (1.2 miles)</p>
+                    <p>For lodges or Airbnbs nearby:</p>
+                    <a href="https://www.airbnb.co.uk/s/North-Cave--United-Kingdom" target="_blank" class="btn btn-secondary btn-small">Search Airbnb</a>
+                    <a href="https://www.hoseasons.co.uk/holiday-lodges/east-pennines/east-yorkshire" target="_blank" class="btn btn-secondary btn-small">Search Lodges</a>
+                </div>
+                <div class="guide-card">
+                    <h3>🍴 Eat & Drink</h3>
+                    <p><strong>The White Hart, North Cave</strong><br>Classic village pub.</p>
+                    <p><strong>The Hotham Arms</strong> (2.5 miles)<br>Great local dining.</p>
+                    <p><strong>The Pipe and Glass</strong> (9 miles)<br>Michelin-starred excellence.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>🚖 Taxis</h3>
+                    <p><strong>Pre-booking is essential!</strong><br>
+                        Cave Cars: 01430 422633<br>
+                        South Cave Cars: 01430 422322
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <strong>Is there parking available?</strong>
+                <p>Yes, there is plenty of free parking on-site at Townend Farm.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Can I bring my children?</strong>
+                <p>Absolutely! Children are welcome. It is a working farm, so there will be plenty for them to see!</p>
+            </div>
+            <div class="faq-item">
+                <strong>What is the dress code?</strong>
+                <p>Whatever you fancy partying in! Flats or block heels are highly recommended for the farm terrain.</p>
+            </div>
+        </div>
+
         <div class="contact-info">
-            <h3>Questions?</h3>
-            <p>Reach out to us if you need anything at all:</p>
+            <h3>Still have questions?</h3>
+            <p>Reach out to us anytime:</p>
             <a href="mailto:emmanuel.isitor@icloud.com" class="contact-link">📧 emmanuel.isitor@icloud.com</a>
             <a href="tel:07411218237" class="contact-link">📞 07411 218237</a>
         </div>
@@ -135,7 +226,8 @@
     <section id="rsvp">
         <h2>RSVP</h2>
         <p>Please let us know if you can make it by <strong>1st May 2026</strong>.</p>
-        <a href="#" class="btn">RSVP Online Here</a>
+        
+        <a href="PASTE_YOUR_LINK_HERE" class="btn">RSVP Online Here</a>
     </section>
 
     <footer>

@@ -6,144 +6,31 @@
     <title>Emeke & Fiona's Wedding</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #FFEFDF; 
-            --navy: #2C4C87;     
-            --accent: #E4DCC5;   
-            --white: #ffffff;
-        }
-
+        :root { --bg-color: #FFEFDF; --navy: #2C4C87; --accent: #E4DCC5; --white: #ffffff; }
         * { box-sizing: border-box; }
-        body { 
-            margin: 0; padding: 0; 
-            font-family: 'Quicksand', sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--navy); 
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background: var(--bg-color);
-            padding: 20px 0;
-            text-align: center;
-            z-index: 1000;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: var(--navy);
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        /* Invitation Section */
-        .invitation-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
-        }
-        .invitation-image {
-            width: 100%;
-            max-width: 600px; 
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Section Layouts */
-        section {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
+        body { margin: 0; padding: 0; font-family: 'Quicksand', sans-serif; background-color: var(--bg-color); color: var(--navy); line-height: 1.6; scroll-behavior: smooth; }
+        nav { position: sticky; top: 0; background: var(--bg-color); padding: 20px 0; text-align: center; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--navy); text-transform: uppercase; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; }
+        .invitation-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .invitation-image { width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; }
+        section { padding: 80px 20px; max-width: 1000px; margin: auto; text-align: center; }
         h2 { font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; }
         h3 { font-weight: 600; margin-top: 0; font-size: 1.2rem; }
-
-        /* Order of Event Box */
-        .event-box {
-            border: 1px solid var(--navy);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 30px auto;
-            max-width: 500px;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Buttons */
+        .event-box { border: 1px solid var(--navy); padding: 20px; border-radius: 12px; margin: 30px auto; max-width: 500px; background-color: rgba(255, 255, 255, 0.2); }
         .btn-group { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 25px; }
-        .btn {
-            display: inline-block;
-            padding: 14px 30px;
-            background-color: var(--navy);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s;
-            min-width: 250px;
-        }
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--navy);
-            color: var(--navy);
-        }
+        .btn { display: inline-block; padding: 14px 30px; background-color: var(--navy); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; min-width: 250px; }
+        .btn-secondary { background-color: transparent; border: 2px solid var(--navy); color: var(--navy); }
         .btn:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        /* Guide Grid */
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            text-align: left;
-            margin-top: 40px;
-        }
-        .guide-card {
-            background: rgba(255, 255, 255, 0.4);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid var(--accent);
-        }
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; text-align: left; margin-top: 40px; }
+        .guide-card { background: rgba(255, 255, 255, 0.4); padding: 25px; border-radius: 12px; border: 1px solid var(--accent); }
         .guide-card a { color: var(--navy); font-weight: 600; }
-
-        /* FAQ Section */
-        .faq-container {
-            text-align: left;
-            max-width: 700px;
-            margin: 40px auto 0;
-        }
+        .faq-container { text-align: left; max-width: 700px; margin: 40px auto 0; }
         .faq-item { margin-bottom: 25px; }
         .faq-item strong { display: block; margin-bottom: 5px; font-size: 1.1rem; }
-
-        /* Contact Box */
-        .contact-info {
-            background-color: rgba(44, 76, 135, 0.05);
-            padding: 40px 20px;
-            border-radius: 15px;
-            margin-top: 50px;
-        }
-        .contact-link {
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 600;
-            display: block;
-            margin: 10px 0;
-            font-size: 1.1rem;
-        }
-
+        .contact-info { background-color: rgba(44, 76, 135, 0.05); padding: 40px 20px; border-radius: 15px; margin-top: 50px; }
+        .contact-link { color: var(--navy); text-decoration: none; font-weight: 600; display: block; margin: 10px 0; font-size: 1.1rem; }
         footer { padding: 60px 20px; text-align: center; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
-
-        @media (max-width: 600px) {
-            nav a { margin: 0 5px; font-size: 0.75rem; }
-            section { padding: 50px 20px; }
-        }
+        @media (max-width: 600px) { nav a { margin: 0 5px; font-size: 0.75rem; } section { padding: 50px 20px; } }
     </style>
 </head>
 <body>
@@ -165,7 +52,7 @@
         <h2>The Big Day</h2>
         <p><strong>Saturday 25th July 2026</strong><br>
         2:00 PM prompt<br>
-        Townend Farm, North Cave, YO43 4XB</p>
+        Townend Farm, North Cliffe, YO43 4XB</p>
         
         <div class="event-box">
             <h3>✨ The Order of Event</h3>
@@ -173,24 +60,21 @@
         </div>
 
         <div class="btn-group">
-            <a href="https://maps.app.goo.gl/YfS3WjVAnC7DkY7y8" target="_blank" class="btn">📍 Get Directions</a>
-            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Emeke+%26+Fiona%27s+Wedding&dates=20260725T140000Z/20260726T000000Z&details=Please+leave+the+stilettos+at+home!&location=Townend+Farm,+North+Cave+YO43+4XB" 
-               target="_blank" class="btn btn-secondary">📅 Save to Calendar</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=North+Cliffe+YO43+4XB" target="_blank" class="btn">📍 Get Directions</a>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Emeke+%26+Fiona%27s+Wedding&dates=20260725T140000Z/20260726T000000Z&details=Please+leave+the+stilettos+at+home!&location=Townend+Farm,+North+Cliffe+YO43+4XB" target="_blank" class="btn btn-secondary">📅 Save to Calendar</a>
         </div>
     </section>
 
     <section id="photos" style="background-color: rgba(44, 76, 135, 0.05); max-width: 100%;">
         <div style="max-width: 800px; margin: auto;">
             <h2>Share the Love 📸</h2>
-            <p>Help us capture the day! Click below to join our shared album where you can upload your favorite shots and see everyone's memories.</p>
-            
-            <div style="margin-top: 20px; margin-bottom: 25px; padding: 20px; border: 1px solid var(--navy); border-radius: 10px; background: #fff;">
+            <p>Help us capture the day! Click below to join our shared album.</p>
+            <div style="margin: 20px 0; padding: 20px; border: 1px solid var(--navy); border-radius: 10px; background: #fff;">
                 <p style="font-size: 0.95rem; color: var(--navy); margin: 0;">
                     <strong>A Note on Safeguarding:</strong><br>
-                    We love having children celebrate with us! However, for the privacy and safety of all our young guests, <strong>please do not take or share any photos of children</strong> unless you have the explicit permission of their parents. We appreciate your understanding in helping us keep everyone safe.
+                    For the privacy of our young guests, <strong>please do not take or share photos of children</strong> without explicit parental permission.
                 </p>
             </div>
-
             <div class="btn-group">
                 <a href="https://photos.app.goo.gl/NCxX6xAc3XV9sPD5A" target="_blank" class="btn">View & Upload Photos</a>
             </div>
@@ -200,40 +84,29 @@
     <section id="guide" style="background-color: rgba(228, 220, 197, 0.2); max-width: 100%;">
         <div style="max-width: 1000px; margin: auto;">
             <h2>The Local Guide</h2>
-            
             <div class="guide-grid">
                 <div class="guide-card">
                     <h3>🏨 Where to Stay</h3>
-                    <p><strong><a href="https://www.cavecastlehotel.com/" target="_blank">Cave Castle Hotel</a></strong> (0.8 miles)</p>
-                    <p><strong><a href="https://www.travelodge.co.uk/hotels/137/Hull-South-Cave-hotel" target="_blank">Travelodge South Cave</a></strong> (1.2 miles)</p>
-                    <p><strong><a href="https://thefoxandconeyinn.co.uk/" target="_blank">The Fox & Coney Inn</a></strong> (1.5 miles)</p>
-                    <p><strong><a href="https://www.premierinn.com/gb/en/hotels/england/east-riding-of-yorkshire/hull/hull-west.html" target="_blank">Premier Inn Hull West</a></strong> (6 miles)</p>
-                    <p><strong><a href="https://www.premierinn.com/gb/en/hotels/england/east-riding-of-yorkshire/beverley/beverley-town-centre.html" target="_blank">Premier Inn Beverley Town Centre</a></strong> (10 miles)</p>
-                    <p><strong><a href="https://www.londesborougharms.co.uk/" target="_blank">Londesborough Arms</a></strong> (6 miles)</p>
+                    <p><strong><a href="https://www.londesborougharms.co.uk/" target="_blank">Londesborough Arms</a></strong> (3 miles)</p>
+                    <p><strong><a href="https://www.cavecastlehotel.com/" target="_blank">Cave Castle Hotel</a></strong> (5 miles)</p>
+                    <p><strong><a href="https://www.travelodge.co.uk/hotels/137/Hull-South-Cave-hotel" target="_blank">Travelodge South Cave</a></strong> (5 miles)</p>
+                    <p><strong><a href="https://thefoxandconeyinn.co.uk/" target="_blank">The Fox & Coney Inn</a></strong> (5.5 miles)</p>
                     <div style="margin-top:15px;">
-                        <a href="https://www.airbnb.co.uk/s/North-Cave--United-Kingdom" target="_blank" class="btn btn-secondary" style="min-width: auto; padding: 10px 20px; font-size: 0.8rem; margin-top: 10px;">Search Airbnb</a>
-                        <a href="https://www.google.com/search?q=lodges+and+holiday+rentals+near+North+Cave+YO43+4XB" target="_blank" class="btn btn-secondary" style="min-width: auto; padding: 10px 20px; font-size: 0.8rem; margin-top: 10px;">Search Lodges</a>
+                        <a href="https://www.airbnb.co.uk/s/North-Cliffe--United-Kingdom" target="_blank" class="btn btn-secondary" style="min-width: auto; padding: 10px 20px; font-size: 0.8rem;">Search Airbnb</a>
                     </div>
                 </div>
-
                 <div class="guide-card">
                     <h3>🍴 Eat & Drink</h3>
-                    <p><strong>The White Hart</strong> (North Cave)</p>
                     <p><strong><a href="https://www.thecatchnorthcave.co.uk/" target="_blank">The Catch</a></strong> (North Cave)</p>
                     <p><strong><a href="http://www.thetritoninn.com/" target="_blank">The Triton Inn</a></strong> (Brantingham)</p>
                     <p><strong><a href="http://www.gnuinn.co.uk/" target="_blank">The Gnu Inn</a></strong> (North Newbald)</p>
-                    <p><strong><a href="https://www.hothamarms.co.uk/" target="_blank">The Hotham Arms</a></strong> (Hotham)</p>
                     <p><strong><a href="https://drewtons.co.uk/" target="_blank">Drewton’s Farm Shop</a></strong> (South Cave)</p>
+                    <p><strong>The White Hart</strong> (North Cave)</p>
                 </div>
-
                 <div class="guide-card">
                     <h3>🚖 Taxis</h3>
-                    <p><strong>Pre-book taxis!</strong> Uber is not reliable here.</p>
-                    <p>
-                        Cave Cars: 01430 422633<br>
-                        South Cave Cars: 01430 422322<br>
-                        Beverley Westholme Cars: 01482 888999
-                    </p>
+                    <p><strong>Pre-book early!</strong> Uber is not reliable here.</p>
+                    <p>Cave Cars: 01430 422633<br>South Cave Cars: 01430 422322<br>Beverley Westholme: 01482 888999</p>
                 </div>
             </div>
         </div>
@@ -242,14 +115,12 @@
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
-            <div class="faq-item"><strong>Is there parking?</strong><p>Yes, free parking at Townend Farm.</p></div>
-            <div class="faq-item"><strong>Are kids allowed?</strong><p>Absolutely! Children are welcome. Just be mindful it is a working farm.</p></div>
-            <div class="faq-item"><strong>Dress code?</strong><p>Whatever you're happy in! Flats or block heels are recommended for the farm ground.</p></div>
+            <div class="faq-item"><strong>Where is the farm?</strong><p>Townend Farm is in North Cliffe, a rural area located between North Cave and Market Weighton.</p></div>
+            <div class="faq-item"><strong>Is there parking?</strong><p>Yes, free on-site parking is available.</p></div>
+            <div class="faq-item"><strong>Dress code?</strong><p>Whatever you're happy in! Block heels or flats are advised for the farm ground.</p></div>
         </div>
-
         <div class="contact-info">
-            <h3>Still have questions?</h3>
-            <p>Reach out to us anytime:</p>
+            <h3>Questions?</h3>
             <a href="mailto:emmanuel.isitor@icloud.com" class="contact-link">📧 emmanuel.isitor@icloud.com</a>
             <a href="mailto:fmbriggs@hotmail.co.uk" class="contact-link">📧 fmbriggs@hotmail.co.uk</a>
             <a href="tel:07411218237" class="contact-link">📞 07411 218237</a>
@@ -259,7 +130,7 @@
     <section id="rsvp">
         <h2>RSVP</h2>
         <p>Please let us know if you can make it by 1st May 2026.</p>
-        <a href="#" class="btn">RSVP Online Here</a>
+        <a href="YOUR_LINK_HERE" class="btn">RSVP Online Here</a>
     </section>
 
     <footer><p>Love always, Emeke and Fiona x</p></footer>
